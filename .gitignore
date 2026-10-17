@@ -12,17 +12,19 @@
 # Carpetas y archivos de agentes y skills
 .agent/
 .agents/
+_agents/
+_agent/
 skills-lock.json
 
-# Entornos y dependencias de desarrollo / Node / Python
-node_modules/
-__pycache__/
-*.py[cod]
-.venv/
-venv/
-env/
+# Entornos, credenciales y secretos
 .env
-.env.local
+.env.*
+*.env
+*.key
+*.pem
+*.cert
+secrets/
+credentials.json
 
 # Archivos de logs y depuración
 npm-debug.log*

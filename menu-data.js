@@ -179,6 +179,7 @@ const FOOD_TRUCK_DATA = {
     {
       id: "acompanamientos",
       name: "Acompañamientos y Bebidas",
+      shortName: "Acompañamientos",
       icon: "fas fa-cookie-bite",
       isFullWidth: true,
       items: [
