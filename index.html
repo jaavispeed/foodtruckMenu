@@ -6,6 +6,11 @@
     <title>Menú Carta | El Bajón de los Tíos - Food Truck</title>
     <meta name="description" content="Carta y menú de El Bajón de los Tíos Food Truck. Churrascos, Ass, Vienesas, Salchipapas, Papas Fritas y más. ¡Haz tu pedido directo por WhatsApp!">
     
+    <!-- Favicon e Icono de Pestaña -->
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <link rel="shortcut icon" href="logo.jpg">
+    <link rel="apple-touch-icon" href="logo.jpg">
+    
     <!-- Tipografía Editorial / Craft -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1010,6 +1015,12 @@
             
             const logoEl = document.getElementById('hero-logo-img');
             if (logoEl && business.logoUrl) logoEl.src = business.logoUrl;
+
+            // Actualizar favicon de pestaña si cambia en business.logoUrl
+            if (business.logoUrl) {
+                const favicons = document.querySelectorAll("link[rel*='icon'], link[rel='apple-touch-icon']");
+                favicons.forEach(fav => fav.href = business.logoUrl);
+            }
 
             const titleEl = document.getElementById('brand-title-el');
             if (titleEl) {
